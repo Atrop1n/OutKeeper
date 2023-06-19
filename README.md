@@ -17,6 +17,8 @@ Skills regarding setting up above AWS services are needed.
 
 The hardware of the system is depicted in above picture. You can see door lock, button and indicator LEDs connected to the microcontroller. To make the microcontroller reachable from the internet, we also need to configure Ngrok tunnel. I am using the paid version which lets you have your own custom URL, but you don't need to. It is important to note that in order to use the system, the Ngrok secure tunnel needs to be running in the local network, otherwise photos captured by the camera module won't be available for remote analyzing.
 
+<img width="576" alt="scheme_door_lock" src="https://github.com/Atrop1n/OutKeeper/assets/92330911/9fdef351-293e-43e5-8c73-011476fd7e5f">
+
 
 Because the system is using AWS features, at least some basic skills on the platform are needed. First we need to set up some S3 buckets. One will contain persons' photos, another one the recognizer files (Haar cascades), and the last one will contain python libraries required to run opencv2 on Lambda. You can name your buckets similarly to mine:
 - persons-photos (contains photos)
