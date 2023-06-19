@@ -11,8 +11,7 @@
         android:id="@+id/itemImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:onClick="showPersonDetails"
+        android:clickable="false"
         android:src="@drawable/ic_launcher_foreground" />
 
     <TextView

@@ -17,25 +17,20 @@ import retrofit2.http.*
 import java.io.File
 import java.util.concurrent.TimeUnit
 
-
+const val photo_bucket = "/v1/my-facerecognizerbucket-84808/" //API URL for bucket with your photos
 interface APIService {
     @POST("{api_endpoint}")
     suspend fun createPhoto(@Path("api_endpoint") api_endpoint: String): Response<ResponseBody>
     @HEAD("{api_endpoint}")
     suspend fun getPhotoMetadata(@Path("api_endpoint") api_endpoint: String): Void
-    @PUT("/v1/my-facerecognizerbucket-84808/{photo_name}")
+    @PUT(photo_bucket+"{photo_name}")
     suspend fun uploadPhoto(@Path("photo_name") employeeId: String, @Body requestBody: RequestBody): Response<ResponseBody>
     @GET("v1/my-facerecognizerbucket-84808/")
     suspend fun getPhoto(): Response<ResponseBody>
-    @DELETE("v1/my-facerecognizerbucket-84808/{photo_name}")
+    @DELETE(photo_bucket+"{photo_name}")
     suspend fun deletePhoto(@Path("photo_name") employeeId: String) :Response<ResponseBody>
 }
-suspend fun headMethod(api_endpoint: String) {
-    // Create Retrofit
-    val response_data = getHeadResponse(api_endpoint)
-    // Handle the response data here
-    //return response_data
-}
+
 suspend fun postMethod(api_endpoint: String): String {
     // Create Retrofit
     val response_data = getPostResponse(api_endpoint)
