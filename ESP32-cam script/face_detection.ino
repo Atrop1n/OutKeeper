@@ -34,8 +34,8 @@
 
 int EEPROMPosition = 0;
 
-const char* ssid = "Telekom-792190";
-const char* password = "8aubtf5d59r7tghx";
+const char* ssid = "my-SSID";
+const char* password = "my-password";
 AsyncWebServer server(80);
 
 int button_state = 1; //'0' means the button is pressed
@@ -354,13 +354,4 @@ void loop() {
     delay(5000);
     
   }
-  /*if(take_photo == 1)
-  {
-    new_photo();
-    send_photo();
-    take_photo = 0;
-    Serial.println("Photo taken and sent");
-  }
-  */
-
 }
