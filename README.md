@@ -30,3 +30,4 @@ Keep in mind that bucket names need to be globally unique. If you're not able to
 We will use 2 Lambda functions: train_recognizer and recognize_person. 
 Last but not least, we will need some APIs to be able to interact between S3 buckets, application and ESP32-CAM board. Change API URLs in application and microcontroller code for your API URLs. 
 
+Please note that I have disabled all the original AWS APIs and Lambda functions. To make use of the program, you need to make your own AWS instance and adjust code appropriately.
